@@ -3,6 +3,27 @@
 ## Conceito
 Declaração, preenchimento e percorrimento de arrays.
 
+## Introdução ao tema
+
+Um **array** guarda vários valores **do mesmo tipo** numa única variável,
+acessados por **índice a partir de 0**. O tamanho é **fixo** na criação.
+`array.length` (sem parênteses!) devolve o tamanho — logo, o último índice
+válido é `length - 1`. Ultrapassar esse limite gera o clássico
+`ArrayIndexOutOfBoundsException`.
+
+## Exemplo simples
+
+```java
+int[] numeros = {10, 20, 30, 40};
+
+System.out.println(numeros[0]);      // 10 (primeiro elemento)
+System.out.println(numeros.length);  // 4  (tamanho)
+
+for (int i = 0; i < numeros.length; i++) {
+    System.out.println(numeros[i]);  // 10, 20, 30, 40
+}
+```
+
 ## Enunciado
 Crie um arquivo `Main.java` que:
 1. Peça ao usuário quantas notas deseja informar.

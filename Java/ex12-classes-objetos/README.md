@@ -3,6 +3,34 @@
 ## Conceito
 Criação de classes, atributos, construtores e métodos.
 
+## Introdução ao tema
+
+Aqui começa a **Orientação a Objetos**. Uma **classe** é a "planta" (o molde);
+um **objeto** é a "casa" construída a partir dela com `new`. A classe define
+**atributos** (os dados) e **métodos** (os comportamentos); o **construtor**
+roda na criação e inicializa os atributos. Cada objeto guarda **seus próprios
+valores** — duas contas da mesma classe têm saldos independentes.
+
+## Exemplo simples
+
+```java
+class Cachorro {
+    String nome;
+
+    Cachorro(String nome) {        // construtor: mesmo nome da classe
+        this.nome = nome;           // this = "deste objeto"
+    }
+
+    void latir() {
+        System.out.println(nome + ": Au au!");
+    }
+}
+
+// em outro lugar:
+Cachorro rex = new Cachorro("Rex");   // um objeto nascendo
+rex.latir();                          // Rex: Au au!
+```
+
 ## Enunciado
 Crie dois arquivos:
 

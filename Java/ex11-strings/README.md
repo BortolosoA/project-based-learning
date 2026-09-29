@@ -3,6 +3,28 @@
 ## Conceito
 Métodos da classe `String`: `length`, `toUpperCase`, `toLowerCase`, `charAt`, `contains`, `replace`.
 
+## Introdução ao tema
+
+`String` é a classe que representa texto — e uma das mais usadas no dia a dia.
+Ela traz dezenas de métodos prontos: `length()` (tamanho), `toUpperCase()`/
+`toLowerCase()` (caixa), `charAt(i)` (caractere na posição), `contains(...)`
+(contém?), `replace(a, b)` (substitui). E o detalhe que pega todo iniciante:
+Strings se comparam com **`equals()`**, nunca com `==`.
+
+## Exemplo simples
+
+```java
+String frase = "Aprender Java é bom";
+
+System.out.println(frase.length());       // 19
+System.out.println(frase.toUpperCase());  // APRENDER JAVA É BOM
+System.out.println(frase.charAt(0));      // A
+
+String outra = "aprender java é bom";
+System.out.println(frase.equals(outra));              // false (case sensitive)
+System.out.println(frase.equalsIgnoreCase(outra));   // true
+```
+
 ## Enunciado
 Crie um arquivo `AnalisaTexto.java` que leia uma frase do usuário e imprima:
 1. Quantidade de caracteres.

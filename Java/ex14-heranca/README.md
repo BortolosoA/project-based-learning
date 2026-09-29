@@ -3,6 +3,32 @@
 ## Conceito
 Herança com `extends`, `super` e sobrescrita de métodos (`@Override`).
 
+## Introdução ao tema
+
+**Herança** evita repetição: a subclasse **herda** atributos e métodos da
+superclasse com `extends`, e o `super(...)` chama o construtor do "pai". A
+filha pode **sobrescrever** métodos (`@Override`) com comportamento próprio —
+e o **polimorfismo** garante que a versão certa execute, mesmo quando tratamos
+todos os objetos como o tipo genérico.
+
+## Exemplo simples
+
+```java
+class Animal {
+    void falar() { System.out.println("..."); }
+}
+
+class Gato extends Animal {          // Gato É UM Animal
+    @Override
+    void falar() {                   // sobrescreve o comportamento
+        System.out.println("Miau!");
+    }
+}
+
+Animal a = new Gato();   // variável genérica, objeto específico
+a.falar();               // Miau! — o OBJETO decide, não a variável
+```
+
 ## Enunciado
 Modele uma hierarquia de veículos em arquivos separados:
 

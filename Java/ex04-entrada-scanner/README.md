@@ -3,6 +3,25 @@
 ## Conceito
 Leitura de dados do usuário com a classe `java.util.Scanner`.
 
+## Introdução ao tema
+
+Programas ficam interessantes quando **interagem com o usuário**. A classe
+`java.util.Scanner` lê dados digitados no console, e cada método lê um tipo:
+`nextLine()` (texto), `nextInt()` (inteiro), `nextDouble()` (decimal). Não
+esqueça do **import** no topo do arquivo — e de que cada leitura espera o
+usuário apertar ENTER.
+
+## Exemplo simples
+
+```java
+import java.util.Scanner;
+
+Scanner sc = new Scanner(System.in);       // "abre o ouvido" pro console
+System.out.print("Digite seu nome: ");     // print não pula linha
+String nome = sc.nextLine();               // lê a linha inteira digitada
+System.out.println("Olá, " + nome + "!");
+```
+
 ## Enunciado
 Crie um arquivo `Perfil.java` que:
 1. Peça o nome do usuário (`nextLine`).

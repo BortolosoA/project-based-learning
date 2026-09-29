@@ -3,6 +3,37 @@
 ## Conceito
 Colocando tudo junto: classes, herança/composição, coleções, métodos, laços, condicionais, entrada de dados e organização em vários arquivos.
 
+## Introdução ao tema
+
+Aqui não há conceito novo — o desafio é **organização**: transformar tudo o
+que você aprendeu num sistema com várias classes trabalhando juntas. A
+habilidade que separa iniciante de dev é a **separação de responsabilidades**:
+cada classe faz uma coisa só, e as demais apenas *pedem* a ela. Menos "copia e
+cola", mais desenho de arquitetura.
+
+## Exemplo simples
+
+```java
+// Esboço da arquitetura — cada classe com um único papel:
+
+class Livro {
+    // guarda título, autor, status (emprestado ou não)
+}
+
+class Biblioteca {
+    // DETÉM a List<Livro> e TODA a regra de negócio:
+    // adicionar, emprestar (valida disponibilidade), devolver, buscar
+}
+
+class Main {
+    // SÓ interage com o usuário: menu, entrada, impressão
+    // e DELEGA o trabalho para a Biblioteca
+}
+```
+
+Teste mental: "se eu trocar o console por uma interface web, o que muda?"
+Resposta certa: só o `Main`.
+
 ## Enunciado
 Crie um sistema de biblioteca simples com os arquivos:
 

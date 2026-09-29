@@ -3,6 +3,36 @@
 ## Conceito
 Aprender a tratar erros de forma profissional em Java: criar exceções customizadas, usar `try/catch/finally`, `throw`/`throws` e entender a diferença entre exceções *checked* e *unchecked*.
 
+## Introdução ao tema
+
+Erros **vão** acontecer — o que separa um programa amador de um profissional
+é o que acontece quando eles ocorrem. Em vez de deixar tudo quebrar com um
+*stack trace*, Java oferece **exceções**: o `throw` "joga" o problema, o
+`try/catch` captura e trata, e o `finally` roda sempre. Exceções
+**customizadas** dão nomes claros aos problemas do seu domínio
+("SaldoInsuficiente" diz muito mais que um número de erro).
+
+## Exemplo simples
+
+```java
+static int dividir(int a, int b) {
+    if (b == 0) {
+        throw new IllegalArgumentException("Divisor não pode ser zero!");
+    }
+    return a / b;
+}
+
+public static void main(String[] args) {
+    try {
+        System.out.println(dividir(10, 0));   // lança a exceção!
+    } catch (IllegalArgumentException e) {
+        System.out.println("ERRO: " + e.getMessage());   // trata, não quebra
+    } finally {
+        System.out.println("Fim da operação.");          // roda SEMPRE
+    }
+}
+```
+
 ## Enunciado
 Você vai construir um caixa eletrônico de console que nunca "quebra" por erro do usuário. O sistema gerencia uma conta bancária simples com menu interativo.
 
