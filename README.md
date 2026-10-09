@@ -46,6 +46,11 @@ As 30 fases se dividem em 4 fases (detalhes nos roadmaps):
   API, Docker + PostgreSQL, mensageria com RabbitMQ e o **projeto final**:
   uma API de e-commerce completa.
 
+## Final
+
+Caso se sinta confortável em fazer projetos mais complexos acesse os repositórios abaixo:
+- [Java -> Pratical-Tutorials](https://github.com/practical-tutorials/project-based-learning#java)
+- [C# -> Pratical-Tutorials](https://github.com/practical-tutorials/project-based-learning#c)
 ## Pré-requisitos
 
 - **Java:** JDK 17+ e Maven (a partir do ex20).
